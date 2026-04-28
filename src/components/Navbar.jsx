@@ -1,8 +1,13 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import Navlink from "./Navlink";
+
 
 const Navbar = () => {
+    const [isActive, setIsActive] = useState(false);
+
     return (
         <div className="border-b px-2">
             <nav className=" flex justify-between items-center  py-3 max-w-7xl mx-auto w-full">
@@ -19,18 +24,21 @@ const Navbar = () => {
                 </div>
 
                 <ul className="flex items-center gap-5 text-sm">
+
                     <li>
-                        <Link href={"/"}>Home</Link>
+                        <Navlink href={"/"}>Home</Navlink>
                     </li>
                     <li>
-                        <Link href={"/all-photos"}>All Photos</Link>
+                        <Navlink href={"/all-photos"}>All Photos</Navlink>
                     </li>
                     <li>
-                        <Link href={"/pricing"}>Pricing</Link>
+                        <Navlink href={"/pricing"}>Pricing</Navlink>
                     </li>
                     <li>
-                        <Link href={"/profile"}>Profile</Link>
+                        <Navlink href={"/profile"}>Profile</Navlink>
                     </li>
+
+
                 </ul>
 
                 <div className="flex gap-4">

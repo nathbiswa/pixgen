@@ -1,5 +1,6 @@
 import { Card, Chip } from '@heroui/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { IoMdHeart } from 'react-icons/io';
 import { MdFileDownload } from 'react-icons/md';
@@ -35,7 +36,8 @@ const CardPhoto = ({ photo }) => {
                 </div>
 
             </div>
-            <button className='w-full border cursor-pointer'>View</button>
+            <Link href={`/all-photos/${photos.id}`}><button className='w-full border cursor-pointer'>View</button></Link>
+
         </Card>
     );
 };
